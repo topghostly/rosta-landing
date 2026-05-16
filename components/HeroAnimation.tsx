@@ -309,7 +309,7 @@ export function HeroAnimation() {
               transform: `scale(${scale})`,
             }}
           >
-            <div className="relative flex h-full w-full overflow-hidden rounded-[14px] border border-foreground/[0.08] bg-[#1a1916] font-sans text-foreground shadow-[0_30px_80px_-30px_rgba(0,0,0,0.7),0_0_0_1px_rgba(250,249,245,0.02)_inset] select-none">
+            <div className="relative flex h-full w-full overflow-hidden rounded-[14px] border border-foreground/[0.08] bg-accent font-sans text-foreground shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35),0_0_0_1px_rgba(127,127,127,0.04)_inset] select-none">
               <Sidebar activeHover={activeHover} />
               <Main activeHover={activeHover} searchText={searchText} />
               <Activities activeHover={activeHover} />
@@ -669,7 +669,7 @@ function ActivityItem({
         alt=""
         width={18}
         height={18}
-        className="relative z-10 h-[18px] w-[18px] shrink-0 rounded-full object-cover ring-2 ring-[#1a1916]"
+        className="relative z-10 h-[18px] w-[18px] shrink-0 rounded-full object-cover ring-2 ring-accent"
       />
       <div className="flex min-w-0 flex-col gap-0.5">
         <span className="text-[10px] leading-tight text-foreground/85">
@@ -690,7 +690,7 @@ function ActivityItem({
 function FakeCursor() {
   return (
     <motion.div
-      className="pointer-events-none absolute left-0 top-0 z-50 will-change-transform"
+      className="pointer-events-none absolute left-0 top-0 z-50 text-foreground will-change-transform"
       animate={{ x: CURSOR_PATH.xs, y: CURSOR_PATH.ys }}
       transition={{
         duration: CURSOR_PATH.duration,
@@ -699,15 +699,16 @@ function FakeCursor() {
         ease: "easeInOut",
       }}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/svg/cursor.svg"
-        alt=""
+      <svg
         width={22}
         height={22}
-        draggable={false}
-        style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.55))" }}
-      />
+        viewBox="-102.4 -102.4 1228.80 1228.80"
+        fill="currentColor"
+        aria-hidden="true"
+        style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.4))" }}
+      >
+        <path d="M593.066667 846.933333c-2.133333 0-4.266667 0-8.533334-2.133333s-8.533333-6.4-12.8-10.666667l-78.933333-183.466666-96 89.6c-2.133333 4.266667-6.4 6.4-12.8 6.4-2.133333 0-6.4 0-8.533333-2.133334-6.4-2.133333-12.8-10.666667-12.8-19.2V256c0-8.533333 4.266667-17.066667 12.8-19.2 2.133333-2.133333 6.4-2.133333 8.533333-2.133333 4.266667 0 10.666667 2.133333 14.933333 6.4l341.333334 320c6.4 6.4 8.533333 14.933333 6.4 23.466666-2.133333 8.533333-10.666667 12.8-19.2 14.933334l-134.4 12.8 83.2 181.333333c2.133333 4.266667 2.133333 10.666667 0 17.066667-2.133333 4.266667-6.4 10.666667-10.666667 12.8l-61.866667 27.733333c-4.266667-4.266667-8.533333-4.266667-10.666666-4.266667z" />
+      </svg>
     </motion.div>
   );
 }
