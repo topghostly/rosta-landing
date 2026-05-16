@@ -74,7 +74,7 @@ export function Button({
         type={type}
         disabled={disabled}
         onClick={onClick}
-        className={`w-fit rounded-[4px] ${v.outer} overflow-hidden cursor-pointer select-none outline-none disabled:opacity-40 disabled:cursor-not-allowed`}
+        className={`group w-fit rounded-[4px] ${v.outer} overflow-hidden cursor-pointer select-none outline-none disabled:opacity-40 disabled:cursor-not-allowed`}
         initial={{ padding: "2px 2px 6px 2px" }}
         whileHover={!disabled ? { padding: "2px 2px 4px 2px" } : undefined}
         whileTap={!disabled ? { padding: "2px 2px 2px 2px" } : undefined}
@@ -85,9 +85,17 @@ export function Button({
         >
           {icon && iconPosition === "left" && iconSlot(icon)}
           <span
-            className={`${v.text} font-sans font-semibold text-[13px] md:text-[15px] tracking-[0.01em] whitespace-nowrap leading-none`}
+            className={`${v.text} font-sans font-semibold text-[13px] md:text-[15px] tracking-[0.01em] whitespace-nowrap leading-none relative inline-block overflow-hidden`}
           >
-            {children}
+            <span className="block transition-transform duration-450 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-full">
+              {children}
+            </span>
+            <span
+              aria-hidden="true"
+              className="absolute inset-x-0 top-full block transition-transform duration-450 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-full"
+            >
+              {children}
+            </span>
           </span>
           {icon && iconPosition === "right" && iconSlot(icon)}
         </div>

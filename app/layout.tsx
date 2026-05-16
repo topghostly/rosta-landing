@@ -18,8 +18,18 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Roster",
-  description: "Campaign management for African influencer agencies.",
+  title: {
+    template: "%s — Rosta",
+    default: "Rosta — Campaign Management for African Influencer Agencies",
+  },
+  description:
+    "Rosta helps African influencer marketing agencies manage campaigns, track creator payments, impress brand clients, and understand their profit — all from one place.",
+  icons: { icon: "/images/rosta-ico.ico" },
+  openGraph: {
+    siteName: "Rosta",
+    type: "website",
+    locale: "en_NG",
+  },
 };
 
 export default function RootLayout({

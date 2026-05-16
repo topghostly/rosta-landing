@@ -4,7 +4,7 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 import { Ear } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Join the Waitlist — Rosta",
+  title: "Join the Waitlist",
   description:
     "Be first in line for Rosta. Founding agency pricing, early access, and a direct line to the team.",
 };

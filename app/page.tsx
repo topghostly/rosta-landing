@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
+
+export const metadata: Metadata = {
+  title: "Campaign Management for African Influencer Agencies",
+  description:
+    "Stop running campaigns on WhatsApp and Excel. Rosta helps influencer marketing agencies manage creators, track campaigns, impress clients, and understand profitability — all in one place, priced in naira.",
+  openGraph: {
+    title: "Campaign Management for African Influencer Agencies",
+    description:
+      "Stop running campaigns on WhatsApp and Excel. Rosta helps influencer marketing agencies manage creators, track campaigns, impress clients, and understand profitability.",
+    type: "website",
+  },
+};
 import { Benefits } from "@/components/Benefits";
 import { CTA } from "@/components/CTA";
 import { Features } from "@/components/Features";

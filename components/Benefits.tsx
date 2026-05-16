@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { FileBarChart, LayoutList, Link2, TrendingUp } from "lucide-react";
-import Image from "next/image";
 import { ReactNode } from "react";
 
 interface Benefit {
@@ -21,7 +20,7 @@ const BENEFITS: Benefit[] = [
     heading: "Know Exactly What You Made on Every Campaign",
     description:
       "Enter what you charged the brand. Enter what you paid the creator. Rosta calculates your profit automatically per influencer, per campaign, in real time. No spreadsheet. No guesswork. Just the exact naira figure, every time.",
-    image: "/images/benefit-1.webp",
+    image: "/images/Test-1.webp",
     imageAlt:
       "Campaign profit breakdown showing creator payouts, brand charges and agency profit per influencer",
   },
@@ -31,7 +30,7 @@ const BENEFITS: Benefit[] = [
     heading: "Send Proposals That Make Brands Take You Seriously",
     description:
       "Stop sending PDFs on WhatsApp. With Rosta, you share a clean branded link, the brand opens it, sees each creator's stats and rates, and approves directly in their browser. What used to take days of back-and-forth now takes minutes. You look like a proper operation.",
-    image: "/images/benefit-2.webp",
+    image: "/images/Test-3.webp",
     imageAlt:
       "Shareable branded proposal link where the brand reviews and approves creators in their browser",
   },
@@ -41,7 +40,7 @@ const BENEFITS: Benefit[] = [
     heading: "Always Know Where Every Creator Stands",
     description:
       "Managing ten creators across three campaigns means something always slips. Rosta gives every creator a status: Shortlisted, Briefed, Draft Submitted, Approved, Posted, Paid, colour coded and visible to your whole team in one screen. No more “I thought you followed up” conversations.",
-    image: "/images/benefit-3.webp",
+    image: "/images/Test-2.webp",
     imageAlt:
       "Colour-coded creator status board showing each creator's stage across multiple campaigns",
   },
@@ -51,7 +50,7 @@ const BENEFITS: Benefit[] = [
     heading: "Generate Your Client Report in One Click",
     description:
       "No more two-day PowerPoint jobs. Rosta pulls all your campaign data, reach, engagement, top performers, financials and generates a professional branded PDF automatically. You choose what the client sees and what stays internal. Done in seconds, not days.",
-    image: "/images/benefit-4.webp",
+    image: "/images/Test-4.webp",
     imageAlt:
       "Auto-generated branded client report with reach, engagement and financial summary",
   },
@@ -118,14 +117,16 @@ function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
       </p>
 
       <div className="relative mt-9 aspect-square w-full overflow-hidden">
-        <Image
-          src={benefit.image}
-          alt={benefit.imageAlt}
-          fill
-          sizes="(min-width: 768px) 540px, 90vw"
-          className="object-cover"
-          priority={index < 2}
-        />
+        <picture className="absolute inset-0 block">
+          <source srcSet={benefit.image} type="image/webp" />
+          <img
+            src={benefit.image.replace(".webp", ".png")}
+            alt={benefit.imageAlt}
+            className="h-full w-full object-cover"
+            loading={index < 2 ? "eager" : "lazy"}
+            decoding="async"
+          />
+        </picture>
       </div>
     </motion.article>
   );

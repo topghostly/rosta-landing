@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Check, ChevronDown, Loader2 } from "lucide-react";
-import { FormEvent, useState } from "react";
+import React, { useState } from "react";
 import {
   COUNTRY_OPTIONS,
   ROLE_OPTIONS,
@@ -43,7 +43,7 @@ export function WaitlistForm() {
       }
     };
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setServerError(null);
 
