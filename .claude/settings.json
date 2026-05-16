@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npm run lint)",
+      "Bash(npm run start)",
+      "Bash(npx shadcn@latest add *)",
+      "Bash(npx shadcn@latest init)",
+      "Bash(npm install *)",
+      "Bash(npm install)",
+      "Bash(find . -type f *)",
+      "Bash(find . -name *)",
+      "Bash(ls *)",
+      "Bash(grep *)"
+    ]
+  }
+}

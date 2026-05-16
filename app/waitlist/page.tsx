@@ -1,0 +1,107 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { WaitlistForm } from "@/components/WaitlistForm";
+import { Ear } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Join the Waitlist — Rosta",
+  description:
+    "Be first in line for Rosta. Founding agency pricing, early access, and a direct line to the team.",
+};
+
+export default function WaitlistPage() {
+  return (
+    <main className="min-h-screen w-full bg-[#faf9f5] text-[#141413]">
+      <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col px-6">
+        <header className="flex items-center justify-between py-6 md:py-8">
+          <Link
+            href="/"
+            className="flex items-center gap-2 font-serif text-[20px] tracking-tight text-[#141413]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 400 288.6"
+              className="w-11 md:w-14"
+            >
+              <path
+                fill="var(--background)"
+                d="M280.8,175.7l37.4-37.4c0.6-0.6,1.2-1.2,1.8-1.8c5.8-5.8,11.6-11.6,17.4-17.4c1.6-1.6,3.1-3.1,4.7-4.7
+        c2.5-2.5,5.1-5,7.6-7.6c0.8-0.8,1.6-1.6,2.4-2.4c1.1-1.1,1.1-1.1,2.2-2.2c0.7-0.7,1.3-1.4,2-2
+        c0.6-0.6,1.2-1.2,1.7-1.8l4.4-4.4L343.2,75c-1.6-1.6-3.2-3.2-4.8-4.8c-2.5-2.5-5-5.1-7.6-7.6c-1-1-1.9-1.9-2.9-2.9
+        c-1.4-1.4-2.8-2.8-4.1-4.2c-0.4-0.4-0.9-0.9-1.3-1.3c-0.8-0.8-1.5-1.5-2.2-2.1l-4.8-4.8l-81.6,81.6
+        c-0.3-39.3-0.6-77.4-0.9-115.4h-66V129c-0.9-0.4-1.3-0.6-1.7-0.8l-36.1-36.1c-2.4-2.4-4.8-4.8-7.1-7.2
+        c-4.1-4.1-8.2-8.2-12.3-12.4c-1.7-1.7-3.5-3.5-5.2-5.2c-2.5-2.5-5-5-7.5-7.5c-0.8-0.8-1.5-1.5-2.3-2.3
+        c-0.7-0.7-1.4-1.5-2.2-2.2c-0.7-0.7-1.3-1.3-2-2c-0.7-0.7-1.4-1.4-2.1-1.9l-4.1-4.1L61.3,70.5
+        c-0.2,0.2-0.4,0.4-0.6,0.6c-2.5,2.5-5.1,5-7.6,7.6c-1,1-1.9,1.9-2.9,2.9c-1.4,1.4-2.8,2.8-4.2,4.1
+        c-0.4,0.4-0.9,0.9-1.3,1.3c-0.7,0.7-1.4,1.4-2,2.1l-5,5l1,1c27.4,27.4,54,54,80.7,80.7C80.1,176,42,176.3,3.9,176.6v66
+        c13.3,0.1,26.5,0.1,39.8,0.2c8.4,0.1,16.8,0.1,25.3,0.2c6.2,0,12.5,0.1,18.7,0.1c3.3,0,6.6,0,9.9,0.1
+        c3.1,0,6.3,0,9.4,0.1c1.2,0,2.3,0,3.5,0c4.7,0,9.3-0.1,13.9,0.7c12.3,3,24.3,9.2,31.7,19.8c1.2,2.8,2.4,5.3,4,7.9
+        c4,3.7,4,3.7,16.9,3.4c1.6,0,3.3-0.1,4.9-0.1c3.4,0,6.9,0,10.3-0.1c4.5-0.1,8.9-0.2,13.4-0.2c3.5,0,7,0,10.5,0
+        c1.7,0,3.3,0,5-0.1c2.4,0,4.8,0,7.2-0.1c0.7,0,1.5,0,2.2-0.1c1.3,0,2.6,0,4-0.1c3.1-0.6,3.1-0.6,4.8-2.8
+        c3.2-7.3,9-13.9,15.5-18.5c0.7-0.5,1.4-0.9,2-1.3c8.9-5.9,18.6-8.6,29.2-8.8c1.1,0,2.2,0,3.2,0c3.7,0,7.4-0.1,11-0.1
+        c3.3,0,6.6,0,9.8,0c6.2,0,12.4-0.1,18.6-0.1c8.5,0,17-0.1,25.6-0.1c5.4,0,10.8-0.1,16.1-0.1c8.7,0,17.2,0,25.6-0.1v-66
+        C337.8,176.2,337.8,176.2,280.8,175.7z"
+              />
+            </svg>
+            <span className="font-serif text-[32px] md:text-[38px] tracking-tight text-[#141413]">
+              Rosta
+            </span>
+          </Link>
+        </header>
+
+        <div className="flex flex-1 items-start justify-center py-12 md:py-20">
+          <div className="grid w-full max-w-[1080px] grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+            <div className="flex flex-col md:sticky md:top-12 md:self-start">
+              <div className="inline-flex w-fit items-center gap-1 justify-center rounded-[4px] border border-background/[0.08] bg-background/[0.04] px-2.5 py-1 text-background">
+                <span className="text-background/55">
+                  <Ear size={14} />
+                </span>
+                <span className="font-sans text-[12px] font-medium tracking-tight text-background/55">
+                  EARLY ACCESS
+                </span>
+              </div>
+
+              <h1 className="mt-6 font-serif text-[40px] leading-[1.04] tracking-tight text-[#141413] sm:text-[52px] md:text-[60px]">
+                Join the Rosta Waitlist.
+              </h1>
+
+              <p className="mt-6 max-w-[440px] font-sans text-[16px] leading-[1.55] text-[#5e5d59] md:text-[17px]">
+                Founding agency pricing, early access, and a direct line to the
+                team building Rosta. Six fields. Less than a minute.
+              </p>
+
+              <ul className="mt-10 flex flex-col gap-3 font-sans text-[14px] text-[#3a3937]">
+                <ListItem>Locked-in early pricing in naira</ListItem>
+                <ListItem>First access when we ship</ListItem>
+                <ListItem>Direct feedback channel with the team</ListItem>
+              </ul>
+            </div>
+
+            <div className="w-full">
+              <WaitlistForm />
+            </div>
+          </div>
+        </div>
+
+        <footer className="border-t border-[#141413]/8 py-6">
+          <p className="font-sans text-[14px] text-muted">
+            © {new Date().getFullYear()} Rosta. Built for African influencer
+            agencies.
+          </p>
+        </footer>
+      </div>
+    </main>
+  );
+}
+
+function ListItem({ children }: { children: React.ReactNode }) {
+  return (
+    <li className="flex items-start gap-2.5">
+      <span
+        aria-hidden="true"
+        className="mt-[7px] inline-block h-1.5 w-1.5 rounded-full bg-[#141413]"
+      />
+      <span>{children}</span>
+    </li>
+  );
+}
